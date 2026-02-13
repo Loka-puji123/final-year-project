@@ -1,0 +1,226 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 4.5.8054a"
+    charSet    	0)
+
+(object Design "Logical View"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"64B767BE020E"
+    defaults   	(object defaults
+	rightMargin 	0.250000
+	leftMargin 	0.250000
+	topMargin  	0.250000
+	bottomMargin 	0.500000
+	pageOverlap 	0.250000
+	clipIconLabels 	TRUE
+	autoResize 	TRUE
+	snapToGrid 	TRUE
+	gridX      	16
+	gridY      	16
+	defaultFont 	(object Font
+	    size       	10
+	    face       	"Arial"
+	    bold       	FALSE
+	    italics    	FALSE
+	    underline  	FALSE
+	    strike     	FALSE
+	    color      	0
+	    default_color 	TRUE)
+	showMessageNum 	1
+	showClassOfObject 	TRUE
+	notation   	"Unified")
+    root_usecase_package 	(object Class_Category "Use Case View"
+	quid       	"64B767BE0210"
+	exportControl 	"Public"
+	global     	TRUE
+	logical_models 	(list unit_reference_list)
+	logical_presentations 	(list unit_reference_list
+	    (object UseCaseDiagram "Main"
+		quid       	"64B767BE027D"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    root_category 	(object Class_Category "Logical View"
+	quid       	"64B767BE020F"
+	exportControl 	"Public"
+	global     	TRUE
+	subsystem  	"Component View"
+	quidu      	"64B767BE0211"
+	logical_models 	(list unit_reference_list
+	    (object Class "user"
+		quid       	"64B767C20321"
+		operations 	(list Operations
+		    (object Operation "uploadDataset"
+			quid       	"64B767CD01DB"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "image processing"
+			quid       	"64B767D60393"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "generate CNN model"
+			quid       	"64B767E200B4"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "upload test images"
+			quid       	"64B767EA0048"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "accuracy & loss graph"
+			quid       	"64B767F3021A"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0))
+		class_attributes 	(list class_attribute_list
+		    (object ClassAttribute "images"
+			quid       	"64B767C701FB")))
+	    (object Class "system"
+		quid       	"64B768010267"
+		operations 	(list Operations
+		    (object Operation "performing task"
+			quid       	"64B7680702B7"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)))
+	    (object Association "$UNNAMED$0"
+		quid       	"64B7681B00A8"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$1"
+			quid       	"64B7681B031A"
+			supplier   	"Logical View::system"
+			quidu      	"64B768010267"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$2"
+			quid       	"64B7681B031B"
+			supplier   	"Logical View::user"
+			quidu      	"64B767C20321"
+			is_navigable 	TRUE))))
+	logical_presentations 	(list unit_reference_list
+	    (object ClassDiagram "Main"
+		quid       	"64B767BE021E"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object ClassView "Class" "Logical View::user" @1
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(528, 528)
+			label      	(object ItemLabel
+			    Parent_View 	@1
+			    location   	(294, 322)
+			    fill_color 	12058623
+			    nlines     	1
+			    max_width  	468
+			    justify    	0
+			    label      	"user")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"64B767C20321"
+			compartment 	(object Compartment
+			    Parent_View 	@1
+			    location   	(294, 382)
+			    icon_style 	"Icon"
+			    fill_color 	12058623
+			    anchor     	2
+			    nlines     	7
+			    max_width  	438)
+			width      	486
+			height     	436
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::system" @2
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(1360, 528)
+			label      	(object ItemLabel
+			    Parent_View 	@2
+			    location   	(1188, 447)
+			    fill_color 	12058623
+			    nlines     	1
+			    max_width  	344
+			    justify    	0
+			    label      	"system")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"64B768010267"
+			compartment 	(object Compartment
+			    Parent_View 	@2
+			    location   	(1188, 507)
+			    icon_style 	"Icon"
+			    fill_color 	12058623
+			    anchor     	2
+			    nlines     	2
+			    max_width  	334)
+			width      	362
+			height     	186
+			annotation 	8
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$0" @3
+			location   	(974, 528)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"64B7681B00A8"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$1" @4
+				Parent_View 	@3
+				location   	(446, 0)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"64B7681B031A"
+				client     	@3
+				supplier   	@2
+				line_style 	0)
+			    (object RoleView "$UNNAMED$2" @5
+				Parent_View 	@3
+				location   	(446, 0)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"64B7681B031B"
+				client     	@3
+				supplier   	@1
+				line_style 	0)))))))
+    root_subsystem 	(object SubSystem "Component View"
+	quid       	"64B767BE0211"
+	physical_models 	(list unit_reference_list)
+	physical_presentations 	(list unit_reference_list
+	    (object Module_Diagram "Main"
+		quid       	"64B767BE027C"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    process_structure 	(object Processes
+	quid       	"64B767BE0212"
+	ProcsNDevs 	(list
+	    (object Process_Diagram "Deployment View"
+		quid       	"64B767BE0214"
+		title      	"Deployment View"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    properties 	(object Properties
+	quid       	"64B767BE0213"))

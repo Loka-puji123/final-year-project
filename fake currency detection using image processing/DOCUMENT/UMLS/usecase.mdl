@@ -1,0 +1,390 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 4.5.8054a"
+    charSet    	0)
+
+(object Design "Logical View"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"64B7673002BA"
+    defaults   	(object defaults
+	rightMargin 	0.250000
+	leftMargin 	0.250000
+	topMargin  	0.250000
+	bottomMargin 	0.500000
+	pageOverlap 	0.250000
+	clipIconLabels 	TRUE
+	autoResize 	TRUE
+	snapToGrid 	TRUE
+	gridX      	16
+	gridY      	16
+	defaultFont 	(object Font
+	    size       	10
+	    face       	"Arial"
+	    bold       	FALSE
+	    italics    	FALSE
+	    underline  	FALSE
+	    strike     	FALSE
+	    color      	0
+	    default_color 	TRUE)
+	showMessageNum 	1
+	showClassOfObject 	TRUE
+	notation   	"Unified")
+    root_usecase_package 	(object Class_Category "Use Case View"
+	quid       	"64B7673002BC"
+	exportControl 	"Public"
+	global     	TRUE
+	logical_models 	(list unit_reference_list)
+	logical_presentations 	(list unit_reference_list
+	    (object UseCaseDiagram "Main"
+		quid       	"64B7673003D5"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    root_category 	(object Class_Category "Logical View"
+	quid       	"64B7673002BB"
+	exportControl 	"Public"
+	global     	TRUE
+	subsystem  	"Component View"
+	quidu      	"64B7673002BD"
+	logical_models 	(list unit_reference_list
+	    (object Class "User"
+		quid       	"64B7673D0034"
+		stereotype 	"Actor")
+	    (object UseCase "upload dataset"
+		quid       	"64B7674A01E6")
+	    (object UseCase "image processing"
+		quid       	"64B76754033B")
+	    (object UseCase "Generate CNN  Model"
+		quid       	"64B7675D03DA")
+	    (object UseCase "Upload Test Image"
+		quid       	"64B767690350")
+	    (object UseCase "Accuracy & Loss Graph"
+		quid       	"64B767750129")
+	    (object Association "$UNNAMED$0"
+		quid       	"64B767860156"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$1"
+			quid       	"64B767870118"
+			supplier   	"Logical View::upload dataset"
+			quidu      	"64B7674A01E6"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$2"
+			quid       	"64B767870119"
+			supplier   	"Logical View::User"
+			quidu      	"64B7673D0034"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$3"
+		quid       	"64B7678A00E0"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$4"
+			quid       	"64B7678B0296"
+			supplier   	"Logical View::image processing"
+			quidu      	"64B76754033B"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$5"
+			quid       	"64B7678B0297"
+			supplier   	"Logical View::User"
+			quidu      	"64B7673D0034"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$6"
+		quid       	"64B76790031F"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$7"
+			quid       	"64B7679200D1"
+			supplier   	"Logical View::Generate CNN  Model"
+			quidu      	"64B7675D03DA"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$8"
+			quid       	"64B7679200D2"
+			supplier   	"Logical View::User"
+			quidu      	"64B7673D0034"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$9"
+		quid       	"64B7679502A6"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$10"
+			quid       	"64B767960215"
+			supplier   	"Logical View::Upload Test Image"
+			quidu      	"64B767690350"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$11"
+			quid       	"64B767960216"
+			supplier   	"Logical View::User"
+			quidu      	"64B7673D0034"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$12"
+		quid       	"64B76799024B"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$13"
+			quid       	"64B7679A02B3"
+			supplier   	"Logical View::Accuracy & Loss Graph"
+			quidu      	"64B767750129"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$14"
+			quid       	"64B7679A02B4"
+			supplier   	"Logical View::User"
+			quidu      	"64B7673D0034"
+			is_navigable 	TRUE))))
+	logical_presentations 	(list unit_reference_list
+	    (object ClassDiagram "Main"
+		quid       	"64B7673003D6"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object UseCaseView "Logical View::upload dataset" @1
+			location   	(1344, 208)
+			label      	(object ItemLabel
+			    Parent_View 	@1
+			    location   	(1344, 346)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	633
+			    justify    	0
+			    label      	"upload dataset")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"64B7674A01E6"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Logical View::image processing" @2
+			location   	(1344, 448)
+			label      	(object ItemLabel
+			    Parent_View 	@2
+			    location   	(1344, 586)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	633
+			    justify    	0
+			    label      	"image processing")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"64B76754033B"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Logical View::Generate CNN  Model" @3
+			location   	(1328, 672)
+			label      	(object ItemLabel
+			    Parent_View 	@3
+			    location   	(1328, 810)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	633
+			    justify    	0
+			    label      	"Generate CNN  Model")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"64B7675D03DA"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Logical View::Upload Test Image" @4
+			location   	(1328, 896)
+			label      	(object ItemLabel
+			    Parent_View 	@4
+			    location   	(1328, 1034)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	633
+			    justify    	0
+			    label      	"Upload Test Image")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"64B767690350"
+			height     	118
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::User" @5
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(288, 544)
+			label      	(object ItemLabel
+			    Parent_View 	@5
+			    location   	(288, 704)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	327
+			    justify    	0
+			    label      	"User")
+			icon       	"Actor"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"64B7673D0034"
+			annotation 	8
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$0" @6
+			location   	(789, 381)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"64B767860156"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$1" @7
+				Parent_View 	@6
+				location   	(501, -163)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"64B767870118"
+				client     	@6
+				supplier   	@1
+				line_style 	0)
+			    (object RoleView "$UNNAMED$2" @8
+				Parent_View 	@6
+				location   	(501, -163)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"64B767870119"
+				client     	@6
+				supplier   	@5
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$3" @9
+			location   	(789, 496)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"64B7678A00E0"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$4" @10
+				Parent_View 	@9
+				location   	(501, -48)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"64B7678B0296"
+				client     	@9
+				supplier   	@2
+				line_style 	0)
+			    (object RoleView "$UNNAMED$5" @11
+				Parent_View 	@9
+				location   	(501, -48)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"64B7678B0297"
+				client     	@9
+				supplier   	@5
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$6" @12
+			location   	(781, 602)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"64B76790031F"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$7" @13
+				Parent_View 	@12
+				location   	(493, 58)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"64B7679200D1"
+				client     	@12
+				supplier   	@3
+				line_style 	0)
+			    (object RoleView "$UNNAMED$8" @14
+				Parent_View 	@12
+				location   	(493, 58)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"64B7679200D2"
+				client     	@12
+				supplier   	@5
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$9" @15
+			location   	(781, 709)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"64B7679502A6"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$10" @16
+				Parent_View 	@15
+				location   	(493, 165)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"64B767960215"
+				client     	@15
+				supplier   	@4
+				line_style 	0)
+			    (object RoleView "$UNNAMED$11" @17
+				Parent_View 	@15
+				location   	(493, 165)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"64B767960216"
+				client     	@15
+				supplier   	@5
+				line_style 	0)))
+		    (object UseCaseView "Logical View::Accuracy & Loss Graph" @18
+			location   	(1328, 1120)
+			label      	(object ItemLabel
+			    Parent_View 	@18
+			    location   	(1328, 1258)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	633
+			    justify    	0
+			    label      	"Accuracy & Loss Graph")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"64B767750129"
+			height     	118
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$12" @19
+			location   	(786, 818)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"64B76799024B"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$13" @20
+				Parent_View 	@19
+				location   	(498, 274)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"64B7679A02B3"
+				client     	@19
+				supplier   	@18
+				line_style 	0)
+			    (object RoleView "$UNNAMED$14" @21
+				Parent_View 	@19
+				location   	(498, 274)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"64B7679A02B4"
+				client     	@19
+				supplier   	@5
+				line_style 	0)))))))
+    root_subsystem 	(object SubSystem "Component View"
+	quid       	"64B7673002BD"
+	physical_models 	(list unit_reference_list)
+	physical_presentations 	(list unit_reference_list
+	    (object Module_Diagram "Main"
+		quid       	"64B7673003D4"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    process_structure 	(object Processes
+	quid       	"64B7673002BE"
+	ProcsNDevs 	(list
+	    (object Process_Diagram "Deployment View"
+		quid       	"64B7673002C0"
+		title      	"Deployment View"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    properties 	(object Properties
+	quid       	"64B7673002BF"))
